@@ -141,8 +141,8 @@ const Looks = () => {
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>Incomplete Outfit!</Text>
                             <Text style={styles.modalText}>You haven’t added enough items to create a full look. Add more pieces to complete your outfit.</Text>
-                            <TouchableOpacity style={styles.modalBtn} onPress={closeModalAndGoBack}>
-                                <Text style={styles.modalBtnText}>Back to Wardrobe</Text>
+                            <TouchableOpacity style={[styles.modalBtn, {width: '100%', borderTopColor: '#fff', borderTopWidth: 0.2}]} onPress={closeModalAndGoBack}>
+                                <Text style={[styles.modalBtnText, {color: '#fff', fontWeight: '600'}]}>Back to Wardrobe</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

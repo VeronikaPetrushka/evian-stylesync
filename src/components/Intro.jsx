@@ -4,9 +4,8 @@ import { useNavigation } from "@react-navigation/native";
 const Intro = () => {
     const navigation = useNavigation();
 
-    // change
     const termsOfUse = () => {
-        const url = "https://www.termsfeed.com/live/4adf32db-c1a2-4aff-afe8-05665a149d11";
+        const url = "https://www.termsfeed.com/live/4cdaf22f-bdf4-46da-b671-70c9b7b8fd1b";
         Linking.openURL(url).catch((err) => console.error("Failed to open URL", err));
     };
 

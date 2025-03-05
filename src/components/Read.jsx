@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, StyleSheet, Dimensions, Image, ScrollView, ImageBackground, Share } from "react-native"
 import { useNavigation } from "@react-navigation/native";
 import Icons from './Icons';

@@ -12,6 +12,7 @@ import LooksScreen from './src/screens/LooksScreen';
 import CreateLookScreen from './src/screens/CreateLookScreen';
 import InsightsScreen from './src/screens/InsightsScreen';
 import ReadScreen from './src/screens/ReadScreen';
+import TestScreen from './src/screens/TestScreen';
 
 enableScreens();
 
@@ -85,6 +86,11 @@ const App = () => {
                   <Stack.Screen 
                         name="ReadScreen" 
                         component={ReadScreen} 
+                        options={{ headerShown: false }} 
+                  />
+                  <Stack.Screen 
+                        name="TestScreen" 
+                        component={TestScreen} 
                         options={{ headerShown: false }} 
                   />
               </Stack.Navigator>

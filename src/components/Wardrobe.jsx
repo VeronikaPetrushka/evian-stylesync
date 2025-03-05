@@ -10,7 +10,6 @@ const Wardrobe = () => {
     const navigation = useNavigation();
     const [type, setType] = useState('OUTWEAR');
     const [modalVisible, setModalVisible] = useState(false);
-    const [image, setImage] = useState(null);
     const [wardrobe, setWardrobe] = useState([]);
 
     useFocusEffect(
@@ -41,10 +40,8 @@ const Wardrobe = () => {
                 });
             });
     
-            if (result) setImage(result);
-
             setModalVisible(false);
-            navigation.navigate('AddItemScreen', {image: image})
+            navigation.navigate('AddItemScreen', {image: result})
         } catch (error) {
             Alert.alert("Error", "Failed to select image.");
         }
@@ -58,11 +55,9 @@ const Wardrobe = () => {
                     else resolve(assets?.[0]?.uri || null);
                 });
             });
-    
-            if (result) setImage(result);
-            
+                
             setModalVisible(false);
-            navigation.navigate('AddItemScreen', {image: image})
+            navigation.navigate('AddItemScreen', {image: result})
         } catch (error) {
             Alert.alert("Error", "Failed to take a photo.");
         }
