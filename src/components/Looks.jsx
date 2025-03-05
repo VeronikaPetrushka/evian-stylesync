@@ -9,6 +9,8 @@ const { height } = Dimensions.get('window');
 const Looks = () => {
     const navigation = useNavigation();
     const [isModalVisible, setIsModalVisible] = useState(false);
+    const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
+    const [selectedLookIndex, setSelectedLookIndex] = useState(null);
     const [wardrobe, setWardrobe] = useState([]);
     const [looks, setLooks] = useState([]);
 
@@ -58,6 +60,20 @@ const Looks = () => {
         navigation.navigate('WardrobeScreen');
     };
 
+    const confirmDelete = async () => {
+        if (selectedLookIndex !== null) {
+            try {
+                const updatedLooks = looks.filter((_, index) => index !== selectedLookIndex);
+                await AsyncStorage.setItem('looks', JSON.stringify(updatedLooks));
+                setLooks(updatedLooks);
+                setIsDeleteModalVisible(false);
+                setSelectedLookIndex(null);
+            } catch (error) {
+                console.error("Failed to delete look:", error);
+            }
+        }
+    };
+
     return (
         <ImageBackground source={require('../assets/back.png')} style={{flex: 1}}>
             <View style={styles.container}>
@@ -74,7 +90,14 @@ const Looks = () => {
                         <ScrollView style={{width: '100%'}}>
                             {
                                 looks.map((look, index) => (
-                                    <View key={index} style={{width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20, backgroundColor: 'rgba(0, 0, 0, 0.5)', padding: 12, borderRadius: 13}}>
+                                    <TouchableOpacity 
+                                        key={index} 
+                                        style={styles.card} 
+                                        onLongPress={() => {
+                                            setSelectedLookIndex(index);
+                                            setIsDeleteModalVisible(true);
+                                        }}
+                                    >
                                         {look.visibleItems.OUTWEAR && (
                                             <Image
                                                 source={{ uri: look.visibleItems.OUTWEAR.image }}
@@ -95,7 +118,7 @@ const Looks = () => {
                                                 style={{width: 100, height: 100, resizeMode: 'cover', borderRadius: 13}}
                                             />
                                         )}
-                                    </View>
+                                    </TouchableOpacity>
                                 ))
                             }
                             <View style={{height: 100}} />
@@ -121,6 +144,33 @@ const Looks = () => {
                             <TouchableOpacity style={styles.modalBtn} onPress={closeModalAndGoBack}>
                                 <Text style={styles.modalBtnText}>Back to Wardrobe</Text>
                             </TouchableOpacity>
+                        </View>
+                    </View>
+                </Modal>
+
+                <Modal
+                    visible={isDeleteModalVisible}
+                    transparent
+                    animationType="fade"
+                    onRequestClose={() => setIsDeleteModalVisible(false)}
+                >
+                    <BlurView
+                        style={styles.modalBackground}
+                        intensity={10}
+                        tint="light"
+                    />
+                    <View style={styles.modalContainer}>
+                        <View style={styles.modalContent}>
+                            <Text style={styles.modalTitle}>Delete This Item?</Text>
+                            <Text style={styles.modalText}>Are you sure you want to remove this item from your looks? This action cannot be undone.</Text>
+                            <View style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', borderTopColor: '#fff', borderTopWidth: 0.2 }}>
+                                <TouchableOpacity style={[styles.modalBtn, {borderRightColor: '#fff', borderRightWidth: 0.2}]} onPress={() => setIsDeleteModalVisible(false)}>
+                                    <Text style={[styles.modalBtnText, {fontWeight: '600', color: '#a59e89'}]}>Cancel</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.modalBtn} onPress={confirmDelete}>
+                                    <Text style={[styles.modalBtnText, {fontWeight: '400', color: '#fff'}]}>Delete</Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
                     </View>
                 </Modal>
@@ -169,22 +219,6 @@ const styles = StyleSheet.create({
         color: '#fff',
     },
 
-    typeBtn: {
-        width: '33%',
-        backgroundColor: '#1c1c1c',
-        borderRadius: 60,
-        padding: 12,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-
-    typeBtnText: {
-        fontSize: 16,
-        fontWeight: '400',
-        lineHeight: 19,
-        color: '#ababab',
-    },
-
     card: {
         width: '47%',
         height: 206,
@@ -193,30 +227,15 @@ const styles = StyleSheet.create({
         overflow: 'hidden'
     },
 
-    cardImage: {
-        width: '100%',
-        height: '100%',
-        resizeMode: 'cover'
-    },
-
-    cardBtn: {
-        width: '96%',
-        borderRadius: 100,
-        backgroundColor: '#efe9dd',
-        paddingVertical: 16,
-        paddingHorizontal: 12,
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'absolute',
-        bottom: 0,
-        alignSelf: 'center'
-    },
-
-    cardName: {
-        fontSize: 12,
-        fontWeight: '400',
-        lineHeight: 14.4,
-        color: '#1c1c1c',
+    card: {
+        width: '100%', 
+        flexDirection: 'row', 
+        alignItems: 'center', 
+        justifyContent: 'space-between', 
+        marginBottom: 20, 
+        backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+        padding: 12, 
+        borderRadius: 13
     },
 
     modalBackground: {
@@ -260,19 +279,15 @@ const styles = StyleSheet.create({
     },
 
     modalBtn: {
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
+        width: '50%',
         padding: 11,
-        borderTopColor: '#fff',
-        borderTopWidth: 0.2
+        alignItems: 'center',
+        justifyContent: 'center'
     },
 
     modalBtnText: {
         fontSize: 17,
-        fontWeight: '600',
-        lineHeight: 22,
-        color: '#fff',
+        lineHeight: 22
     }
 
 })
