@@ -25,6 +25,12 @@ const Icons = ({ type }) => {
     case 'arrows':
       imageSource = require('../assets/icons/arrows.png');
       break;
+    case 'back':
+      imageSource = require('../assets/icons/back.png');
+      break;
+    case 'share':
+      imageSource = require('../assets/icons/share.png');
+      break;
   }
 
   return (
