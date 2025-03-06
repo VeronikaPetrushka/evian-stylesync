@@ -1,6 +1,6 @@
 import { View } from "react-native"
-import Wardrobe from "../components/Wardrobe"
-import Nav from "../components/Nav";
+import Wardrobe from "../comp/Wardrobe"
+import Nav from "../comp/Nav";
 
 const WardrobeScreen = () => {
     return (

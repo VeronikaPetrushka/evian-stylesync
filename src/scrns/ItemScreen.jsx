@@ -1,10 +1,12 @@
 import { View } from "react-native"
-import Intro from "../components/Intro"
+import Item from "../comp/Item"
 
-const IntroScreen = () => {
+const ItemScreen = ({ route }) => {
+    const { item } = route.params;
+
     return (
         <View style={styles.container}>
-            <Intro />
+            <Item item={item} />
         </View>
     )
 }; 
@@ -16,4 +18,4 @@ const styles = {
     }
 }
 
-export default IntroScreen;
+export default ItemScreen;

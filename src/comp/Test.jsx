@@ -4,15 +4,15 @@ import { Text, View, TouchableOpacity, StyleSheet, Dimensions, Image, ImageBackg
 const { height } = Dimensions.get('window');
 
 const clothes = [
-    require('../assets/clothes/1.png'),
-    require('../assets/clothes/2.png'),
-    require('../assets/clothes/3.png'),
-    require('../assets/clothes/4.png'),
-    require('../assets/clothes/5.png'),
-    require('../assets/clothes/6.png'),
-    require('../assets/clothes/7.png'),
-    require('../assets/clothes/8.png'),
-    require('../assets/clothes/9.png'),
+    require('../assts/clothes/1.png'),
+    require('../assts/clothes/2.png'),
+    require('../assts/clothes/3.png'),
+    require('../assts/clothes/4.png'),
+    require('../assts/clothes/5.png'),
+    require('../assts/clothes/6.png'),
+    require('../assts/clothes/7.png'),
+    require('../assts/clothes/8.png'),
+    require('../assts/clothes/9.png'),
 ]
 
 const Test = () => {
@@ -61,7 +61,7 @@ const Test = () => {
     };
 
     return (
-        <ImageBackground source={require('../assets/back.png')} style={{flex: 1}}>
+        <ImageBackground source={require('../assts/back.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <Text style={styles.title}>🎭 FASHION FLASHBACK</Text>

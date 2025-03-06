@@ -1,12 +1,12 @@
 import { View } from "react-native"
-import Item from "../components/Item"
+import Read from "../comp/Read"
 
-const ItemScreen = ({ route }) => {
-    const { item } = route.params;
+const ReadScreen = ({ route }) => {
+    const { insight } = route.params;
 
     return (
         <View style={styles.container}>
-            <Item item={item} />
+            <Read insight={insight} />
         </View>
     )
 }; 
@@ -18,4 +18,4 @@ const styles = {
     }
 }
 
-export default ItemScreen;
+export default ReadScreen;

@@ -10,7 +10,7 @@ const Intro = () => {
     };
 
     return (
-        <ImageBackground source={require('../assets/loaders/back.png')} style={{flex: 1}}>
+        <ImageBackground source={require('../assts/loaders/back.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <Text style={styles.title}>YOUR WARDROBE, PERFECTLY ORGANIZED</Text>

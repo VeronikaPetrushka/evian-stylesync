@@ -1,6 +1,6 @@
 const insights = [
     {
-        image: require('../assets/insights/1.png'),
+        image: require('../assts/insights/1.png'),
         title: 'Mastering the Capsule Wardrobe',
         description: [
             'A capsule wardrobe is one of the smartest ways to simplify your style while ensuring you always look put together. The concept revolves around owning fewer but higher-quality pieces that can be mixed and matched effortlessly. The goal is to create a functional and stylish wardrobe that saves you time when getting dressed while eliminating clutter.',
@@ -10,7 +10,7 @@ const insights = [
         ]
     },
     {
-        image: require('../assets/insights/2.png'),
+        image: require('../assts/insights/2.png'),
         title: 'The Art of Layering for Every Season',
         description: [
             'Layering is an essential skill that adds depth to your outfits while keeping you comfortable in any weather. It’s not just about throwing on extra pieces—it’s about combining fabrics, textures, and colors to create a look that is both stylish and functional.',
@@ -20,7 +20,7 @@ const insights = [
         ]
     },
     {
-        image: require('../assets/insights/3.png'),
+        image: require('../assts/insights/3.png'),
         title: 'Choosing the Right Fit for Your Clothes',
         description: [
             'No matter how stylish your clothing is, if it doesn’t fit properly, it won’t look good. Fit is the foundation of great style—it enhances your proportions, adds structure to your look, and makes even the simplest outfit look intentional.',
@@ -30,7 +30,7 @@ const insights = [
         ]
     },
     {
-        image: require('../assets/insights/4.png'),
+        image: require('../assts/insights/4.png'),
         title: 'How to Build a Smart-Casual Wardrobe',
         description: [
             'Dressing smart-casual is all about finding the right balance between polished and relaxed elements. It’s an essential dress code for modern men who want to look refined without appearing overdressed.',
@@ -40,7 +40,7 @@ const insights = [
         ]
     },
     {
-        image: require('../assets/insights/5.png'),
+        image: require('../assts/insights/5.png'),
         title: 'The Power of Grooming and Style',
         description: [
             'Style isn’t just about clothing—it’s about the complete package. Grooming plays a crucial role in how well your outfit is received. No matter how expensive or well-fitted your clothes are, poor grooming can take away from your overall look.',
@@ -50,7 +50,7 @@ const insights = [
         ]
     },
     {
-        image: require('../assets/insights/6.png'),
+        image: require('../assts/insights/6.png'),
         title: 'How to Elevate Your Style with Accessories',
         description: [
             'Accessories are the finishing touch that transforms a basic outfit into a stylish statement. The key is to keep them subtle yet intentional—too many accessories can make an outfit look cluttered, while the right ones add refinement.',

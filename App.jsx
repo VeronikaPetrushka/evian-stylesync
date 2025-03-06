@@ -4,15 +4,15 @@ import { enableScreens } from 'react-native-screens';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import IntroScreen from './src/screens/IntroScreen';
-import WardrobeScreen from './src/screens/WardrobeScreen';
-import AddItemScreen from './src/screens/AddItemScreen';
-import ItemScreen from './src/screens/ItemScreen';
-import LooksScreen from './src/screens/LooksScreen';
-import CreateLookScreen from './src/screens/CreateLookScreen';
-import InsightsScreen from './src/screens/InsightsScreen';
-import ReadScreen from './src/screens/ReadScreen';
-import TestScreen from './src/screens/TestScreen';
+import IntroScreen from './src/scrns/IntroScreen';
+import WardrobeScreen from './src/scrns/WardrobeScreen';
+import AddItemScreen from './src/scrns/AddItemScreen';
+import ItemScreen from './src/scrns/ItemScreen';
+import LooksScreen from './src/scrns/LooksScreen';
+import CreateLookScreen from './src/scrns/CreateLookScreen';
+import InsightsScreen from './src/scrns/InsightsScreen';
+import ReadScreen from './src/scrns/ReadScreen';
+import TestScreen from './src/scrns/TestScreen';
 
 enableScreens();
 
@@ -32,8 +32,8 @@ const LoaderScreen = ({ navigation }) => {
       }, []);
   
       return (
-            <ImageBackground source={require('./src/assets/loaders/back.png')} style={{flex: 1}}>
-                <Image source={require('./src/assets/loaders/logo.png')} style={{width: 285, height: 100, resizeMode: 'contain', alignSelf: 'center', position: 'absolute', bottom: 100}} />
+            <ImageBackground source={require('./src/assts/loaders/back.png')} style={{flex: 1}}>
+                <Image source={require('./src/assts/loaders/logo.png')} style={{width: 285, height: 100, resizeMode: 'contain', alignSelf: 'center', position: 'absolute', bottom: 100}} />
             </ImageBackground>
       );
   };

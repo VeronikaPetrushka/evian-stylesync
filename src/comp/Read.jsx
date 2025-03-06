@@ -23,7 +23,7 @@ const Read = ({ insight }) => {
     };
 
     return (
-        <ImageBackground source={require('../assets/back.png')} style={{flex: 1}}>
+        <ImageBackground source={require('../assts/back.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <View style={styles.row}>

@@ -1,11 +1,11 @@
 import { View } from "react-native"
-import Insights from "../components/Insights"
-import Nav from "../components/Nav";
+import Looks from "../comp/Looks"
+import Nav from "../comp/Nav";
 
-const InsightsScreen = () => {
+const LooksScreen = () => {
     return (
         <View style={styles.container}>
-            <Insights />
+            <Looks />
             <View style={styles.nav}>
                 <Nav />
             </View>
@@ -26,4 +26,4 @@ const styles = {
     }
 }
 
-export default InsightsScreen;
+export default LooksScreen;

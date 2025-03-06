@@ -1,6 +1,6 @@
 import { View } from "react-native"
-import Test from "../components/Test"
-import Nav from "../components/Nav";
+import Test from "../comp/Test"
+import Nav from "../comp/Nav";
 
 const TestScreen = () => {
     return (

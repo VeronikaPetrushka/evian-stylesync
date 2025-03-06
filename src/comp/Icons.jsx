@@ -8,28 +8,28 @@ const Icons = ({ type }) => {
 
   switch (type) {
     case '1':
-      imageSource = require('../assets/nav/1.png');
+      imageSource = require('../assts/nav/1.png');
       break;
     case '2':
-      imageSource = require('../assets/nav/2.png');
+      imageSource = require('../assts/nav/2.png');
       break;
     case '3':
-      imageSource = require('../assets/nav/3.png');
+      imageSource = require('../assts/nav/3.png');
       break;
     case '4':
-      imageSource = require('../assets/nav/4.png');
+      imageSource = require('../assts/nav/4.png');
       break;
     case 'close':
-      imageSource = require('../assets/icons/close.png');
+      imageSource = require('../assts/icons/close.png');
       break;
     case 'arrows':
-      imageSource = require('../assets/icons/arrows.png');
+      imageSource = require('../assts/icons/arrows.png');
       break;
     case 'back':
-      imageSource = require('../assets/icons/back.png');
+      imageSource = require('../assts/icons/back.png');
       break;
     case 'share':
-      imageSource = require('../assets/icons/share.png');
+      imageSource = require('../assts/icons/share.png');
       break;
   }
 

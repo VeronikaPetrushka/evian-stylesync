@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, StyleSheet, Dimensions, Image, ScrollView, ImageBackground } from "react-native"
 import { useNavigation } from "@react-navigation/native";
-import insights from '../constants/insights';
+import insights from '../const/insights';
 
 const { height } = Dimensions.get('window');
 
@@ -9,7 +9,7 @@ const Insights = () => {
     const navigation = useNavigation();
 
     return (
-        <ImageBackground source={require('../assets/back.png')} style={{flex: 1}}>
+        <ImageBackground source={require('../assts/back.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <Text style={styles.title}>STYLE INSIGHTS & FASHION TIPS</Text>

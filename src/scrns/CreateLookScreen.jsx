@@ -1,12 +1,10 @@
 import { View } from "react-native"
-import AddItem from "../components/AddItem"
+import CreateLook from "../comp/CreateLook"
 
-const AddItemScreen = ({ route }) => {
-    const { image } = route.params;
-
+const CreateLookScreen = () => {
     return (
         <View style={styles.container}>
-            <AddItem image={image} />
+            <CreateLook />
         </View>
     )
 }; 
@@ -18,4 +16,4 @@ const styles = {
     }
 }
 
-export default AddItemScreen;
+export default CreateLookScreen;
