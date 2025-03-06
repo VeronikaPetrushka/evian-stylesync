@@ -38,13 +38,13 @@ const Nav = () => {
 
             <TouchableOpacity 
                 style={[styles.button, activeButton === 'InsightsScreen' && {backgroundColor: '#fff'}]} 
-                onPress={() => handleNavigate('InsightsScreeen')}>
+                onPress={() => handleNavigate('InsightsScreen')}>
                 <Icons type={'3'} />
             </TouchableOpacity>
 
             <TouchableOpacity 
                 style={[styles.button, activeButton === 'TestScreen' && {backgroundColor: '#fff'}]} 
-                onPress={() => handleNavigate('TestScreeen')}>
+                onPress={() => handleNavigate('TestScreen')}>
                 <Icons type={'4'} />
             </TouchableOpacity>
 
