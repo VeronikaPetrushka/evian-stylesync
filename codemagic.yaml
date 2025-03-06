@@ -1,6 +1,6 @@
 workflows:
     sample-workflow:
-        name: Evian's StyleSync
+        name: Elvian's StyleSync
         max_build_duration: 120
         instance_type: mac_mini_m1
         integrations:
@@ -50,4 +50,4 @@ workflows:
           app_store_connect:
             auth: integration
             submit_to_app_store: true
-            copyright: Evian's StyleSync 2025
+            copyright: Elvian's StyleSync 2025
