@@ -5,7 +5,7 @@ const Intro = () => {
     const navigation = useNavigation();
 
     const termsOfUse = () => {
-        const url = "https://www.termsfeed.com/live/4cdaf22f-bdf4-46da-b671-70c9b7b8fd1b";
+        const url = "https://www.termsfeed.com/live/80eba861-b421-489f-9c5c-9d350f4318b8";
         Linking.openURL(url).catch((err) => console.error("Failed to open URL", err));
     };
 
