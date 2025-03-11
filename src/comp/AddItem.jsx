@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, TouchableOpacity, StyleSheet, Dimensions, Image, TextInput, Modal, ScrollView } from "react-native"
+import { Text, View, TouchableOpacity, StyleSheet, Dimensions, Image, TextInput, Modal, ScrollView, ImageBackground } from "react-native"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from "@react-navigation/native";
 import Icons from './Icons';
@@ -61,6 +61,7 @@ const AddItem = ({ image }) => {
     };
 
     return (
+        <ImageBackground source={require('../assts/back/1.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <View style={styles.row}>
@@ -142,6 +143,7 @@ const AddItem = ({ image }) => {
                 </Modal>
 
             </View>
+        </ImageBackground>
     )
 };
 
@@ -152,7 +154,6 @@ const styles = StyleSheet.create({
         paddingTop: height * 0.07,
         padding: 24,
         alignItems: 'center',
-        backgroundColor: '#000'
     },
 
     row: {

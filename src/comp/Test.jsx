@@ -61,7 +61,7 @@ const Test = () => {
     };
 
     return (
-        <ImageBackground source={require('../assts/back.png')} style={{flex: 1}}>
+        <ImageBackground source={require('../assts/back/2.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <Text style={styles.title}>🎭 FASHION FLASHBACK</Text>

@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Text, View, TouchableOpacity, StyleSheet, Dimensions, Image, ScrollView } from "react-native"
+import { Text, View, TouchableOpacity, StyleSheet, Dimensions, Image, ScrollView, ImageBackground } from "react-native"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import Icons from './Icons';
@@ -98,6 +98,7 @@ const CreateLook = () => {
     };
 
     return (
+        <ImageBackground source={require('../assts/back/1.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <View style={styles.row}>
@@ -128,6 +129,7 @@ const CreateLook = () => {
                 </ScrollView>
 
             </View>
+        </ImageBackground>
     )
 };
 
@@ -138,7 +140,6 @@ const styles = StyleSheet.create({
         paddingTop: height * 0.07,
         padding: 24,
         alignItems: 'center',
-        backgroundColor: '#000'
     },
 
     generateBtn: {
